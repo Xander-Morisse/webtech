@@ -1,0 +1,23 @@
+:root {
+    --color-main:#870ed2;
+    --color-accent:#a530ee;
+    --color-tint:#c873fc;
+    --font-main: Trebuchet MS;
+    --measure: 1rem; 
+}
+
+body {
+    color:var(--color-main);
+    background-color: black;
+    font-family: var(--font-main);
+    font-size: var(--measure);
+}
+
+nav a{
+    text-decoration: none;
+    color:var(--color-accent);
+}
+nav a:hover, nav a:focus {
+    color: var(--color-tint);
+    background-color: var(--color-main);
+}
