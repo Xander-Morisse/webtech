@@ -12,8 +12,8 @@
     --circle-margin:15%;
     --square2-size:90%;
     --square2-negmargin:-7%;
-    --font-type: Georgia;
-    --font-weight: 700; 
+    --font-type: Georgia , serif, bold;
+    --font-weight: 600; 
 }
 
 /* === your rules === */
@@ -46,4 +46,8 @@ h1 {
     background-color: var(--yellow-color);
     text-align: center;
     border: var(--border-color);
+    padding-top: 45%;
+    font-size: 3rem;
+    font-weight: var(--font-weight);
+    text-decoration: none;
 }
