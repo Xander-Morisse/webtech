@@ -2,7 +2,45 @@
 
 /* === tokens === */
 :root {
-
+    --background-color:#ff816f;
+    --tab-color:#ffd500;
+    --kaart-color: white;
+    --border-colors: black;
+    --border-thickness: .25rem;
+    --font-type: Arial;
+    --tab-width:15rem;
+    --kaart-width: 35rem;
+    --window-margin: 5rem;
 }
 
 /* === your rules === */
+
+
+body {
+    font-family: var(--font-type);
+    margin: var(--window-margin);
+    background-color: var(--background-color);
+}
+
+h1 {
+    font-size: 1rem;
+    font-weight: 300;
+    padding: 1rem 1.5rem;
+    max-width: var(--tab-width);
+    background-color: var(--tab-color);
+    border: var(--border-thickness) solid var(--border-colors);
+    border-bottom:0;
+    box-shadow: -.25rem .4rem black;
+}
+
+h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    background-color: var(--kaart-color);
+    max-width: var(--kaart-width);
+    border: var(--border-thickness) solid var(--border-colors);
+    padding: 2rem 1.5rem;
+    box-shadow: 
+        -.25rem .4rem black,
+        .25rem .4rem black;
+}
