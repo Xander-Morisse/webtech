@@ -40,9 +40,6 @@ nav ul{
     gap: 0.5rem;
     list-style:none;
     li {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         a{
             padding-top: 0.75rem;
             padding-bottom: 0.75rem;
