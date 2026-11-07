@@ -2,7 +2,158 @@
 
 /* === tokens === */
 :root {
-
+    --background-paper: #f7f4ec;
+    --background-cards: white;
+    --card-ink: #2b2b2b;
+    --muted-ink: #6b6b6b;
+    --nav-card-button: #1f3a2e;
+    --nav-ink: #f3efe6;
+    --accent-ink:#e6b53c;
+    --text-size: 1.6rem;
+    --text-family: Verdana;
+    --head-family: Georgia;
+    --max-column-width:60rem;
+    --column-padding: 2rem;
+    --card-gap:1.5rem;
+    --card-padding:1.5rem;
+    --card-border:0.5rem;
+    --button-LR:1rem;
+    --button-UD:0.5rem;
+    --button-border:0.25rem;
 }
 
 /* === your rules === */
+body {
+    height:100vh;
+    display:flex;
+    flex-direction: column;
+    background-color: var(--background-paper);
+    font-family: var(--text-family);
+}
+
+/* nav balk maken */
+header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-card-button);
+}
+
+.logo {
+    color: var(--accent-ink);
+    text-decoration: none;
+}
+
+nav ul{
+    display:flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.5rem;
+    list-style:none;
+    li {
+        a{  
+            font-family: var(--text-family);
+            color: var(--nav-ink);
+            text-decoration: none;
+            padding-top: 0.75rem;
+            padding-bottom: 0.75rem;
+            padding-left: 1.25rem;
+            padding-right: 1.25rem;
+            border-radius: 0.5rem;
+        }
+        a:hover , a:focus{
+            background-color: var(--accent-ink);
+            color: black;
+        }
+    }
+
+}
+/* nav maken end */
+
+/*main maken */
+main {
+    max-width: var(--max-column-width);
+    padding: var(--column-padding);
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    flex: 1;
+    h1{
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    .intro {
+        margin-bottom: 1rem;
+    }
+}
+
+.kaarten {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: var(--card-gap);
+    list-style: none;
+    flex: 1;
+}
+
+.uitgelicht {
+    grid-column: 1/3;
+}
+
+.kaart {
+    display:flex;
+    flex-direction: column;
+    background-color: white;
+    color: var(--card-ink);
+    padding: var(--card-padding);
+    border-radius: var(--card-border);
+    box-shadow: 
+    2px -2px 10px #bebebe,
+    -2px 2px 10px #bebebe;
+}
+
+.soort {
+    color: var(--muted-ink);
+    margin-bottom: 0.5rem;
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 2rem;
+}
+
+.beschrijving {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.knop {
+    align-self: flex-start;
+    margin-top: auto;
+    background-color: var(--nav-card-button);
+    color:white;
+    text-decoration: none;
+    padding: var(--button-UD) var(--button-LR);
+    border-radius: var(--button-border);
+}
+
+.knop:hover, .kmop:focus{
+            background-color: var(--accent-ink);
+            color: black;
+}
+
+footer {
+    display: flex;
+    height: 5vh;
+    background-color: var(--nav-card-button);
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
