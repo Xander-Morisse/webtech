@@ -144,8 +144,8 @@ h2 {
 }
 
 .knop:hover, .kmop:focus{
-            background-color: var(--accent-ink);
-            color: black;
+    background-color: var(--accent-ink);
+    color: black;
 }
 
 footer {
