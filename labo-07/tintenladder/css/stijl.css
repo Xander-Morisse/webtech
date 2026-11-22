@@ -43,8 +43,13 @@ body {
 .trede:nth-child(3){background-color: hsl(var(--hue) 55% 75%);}
 .trede:nth-child(4){background-color: hsl(var(--hue) 55% 65%);}
 .trede:nth-child(5){background-color: hsl(var(--hue) 55% 55%);}
-.trede:nth-child(6){background-color: hsl(var(--hue) 55% 45%);}
-.trede:nth-child(7){background-color: hsl(var(--hue) 55% 35%);}
-.trede:nth-child(8){background-color: hsl(var(--hue) 55% 25%);}
-.trede:nth-child(9){background-color: hsl(var(--hue) 55% 15%);}
-.trede:nth-child(10){background-color: hsl(var(--hue) 55% 5%);}
+.trede:nth-child(6){background-color: hsl(var(--hue) 55% 45%);
+color: white;}
+.trede:nth-child(7){background-color: hsl(var(--hue) 55% 35%);
+color: white;}
+.trede:nth-child(8){background-color: hsl(var(--hue) 55% 25%);
+color: white;}
+.trede:nth-child(9){background-color: hsl(var(--hue) 55% 15%);
+color: white;}
+.trede:nth-child(10){background-color: hsl(var(--hue) 55% 5%);
+color: white;}

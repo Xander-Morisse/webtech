@@ -1,12 +1,69 @@
 /* stijl.css - labo 7, leespagina (reset.css is linked before this file) */
 
 /* === fonts: one @font-face per file in fonts/ (7.2) === */
+@font-face {
+    font-family: "Atkinson";
+    src: url("../fonts/atkinson-hyperlegible-latin-400-normal.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 /* === tokens: type scale, spacing scale, colour roles (7.4, 7.5, 7.7) === */
 :root {
+    --font-head: "Fraunces", Georgia, Verdana;
+    --font-text: "Atkinson", Georgia, Verdana;
+    --text-s: 0.8rem;
+    --text-m: 1rem;
+    --text-l: 1.25rem;
+    --text-xl: 1.563rem;
+    --text-xxl: 1.953rem;
+    --text-xxxl: 2.441rem;
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
+    --surface: hsl(40 30% 97%);
+    --ink: hsl(230 25% 15%);
+    --muted: hsl(230 10% 42%);
+    --accent: hsl(15 70% 42%);
+    --line: hsl(230 15% 85%);
+    --column-width: 65ch;
+    --height-m: 1.5rem;
 
 }
 
 /* === base === */
+body{
+    /* margin-left:auto;
+    margin-right: auto; */
+    display: flex;
+    justify-content: center;
+    background-color: var(--surface);
+    font-family: var(--font-text);
+    padding: var(--space-xl) var(--space-m) var(--space-xl) var(--space-m);
+    font-size: var(--text-m);
+    line-height: var(--height-m);
+    h1, h2, h3{
+        font-family: var(--font-head);
+    }
+    p{
+        padding-bottom: var(--space-m);
+    }
+    .bovenkop{
 
+    }
+}
 /* === the article === */
+article{
+    display:flex;
+    flex-direction: column;
+    width:100%;
+    max-width: var(--column-width);
+}
