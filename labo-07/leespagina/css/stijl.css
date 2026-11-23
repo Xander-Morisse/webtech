@@ -8,10 +8,24 @@
     font-display: swap;
 }
 @font-face {
+    font-family: "Atkinson";
+    src: url("../fonts/atkinson-hyperlegible-latin-400-italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
+}
+@font-face {
     font-family: "Fraunces";
     src: url("../fonts/fraunces-latin-wght-normal.woff2") format("woff2");
     font-weight: 100 900;
     font-display: swap;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url("../fonts/fraunces-latin-wght-italic.woff2") format("woff2");
+    font-weight: 100 900;
+    font-display: swap;
+    font-style: italic;
 }
 
 /* === tokens: type scale, spacing scale, colour roles (7.4, 7.5, 7.7) === */
@@ -56,8 +70,66 @@ body{
     p{
         padding-bottom: var(--space-m);
     }
-    .bovenkop{
-
+    header{
+        padding-bottom: var(--space-xl);
+        .bovenkop{
+            font-size: var(--text-s);
+            color: var(--accent);
+            font-weight: 900;
+            letter-spacing: 0.1rem;
+            padding-bottom: var(--space-s);
+        }
+        h1 {
+            font-size: var(--text-xxxl);
+            font-weight: 900;
+            line-height: 1.1rem;
+            padding-bottom: var(--space-m);
+        }
+        .intro{
+            font-size: var(--text-l);
+            line-height: 1.4rem;
+            padding-bottom: var(--space-m);
+        }
+        .meta{
+            font-size: var(--text-s);
+            color:var(--muted);
+            padding-bottom: var(--space-m);
+            border-bottom: 1px solid;
+        }
+    }
+    h2{
+        font-size: var(--text-xl);
+        line-height: 1.2rem;
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-s);
+    }
+    h3{
+        font-size: var(--text-l);
+        line-height: 1.3rem;
+        padding-top: var(--space-l);
+        padding-bottom: var(--space-xs);
+    }
+    blockquote{
+        font-family: var(--font-head);
+        font-style: italic;
+        font-size: var(--text-l);
+        line-height: 1.4rem;
+        border-left: 4px solid var(--accent);
+        padding-left: var(--space-l);
+        padding-top: var(--space-l);
+        padding-bottom: var(--space-l);
+        footer{
+            font-size: var(--text-s);
+            font-family: var(--font-text);
+            color: var(--muted);
+        }
+    }
+    .bron{
+        font-size: var(--text-s);
+        color: var(--muted);
+        border-top: 1px solid;
+        padding-top: var(--space-m);
+        padding-bottom: var(--space-xl);
     }
 }
 /* === the article === */

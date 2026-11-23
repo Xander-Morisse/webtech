@@ -1,14 +1,161 @@
 /* stijl.css - labo 7, kaaien (reset.css is linked before this file) */
 
 /* === fonts === */
+@font-face {
+    font-family: "Fraunces";
+    src: url(../fonts/fraunces-latin-wght-normal.woff2) format(woff2);
+    font-weight: 100 900;
+    font-display: swap;
+}
 
 /* === tokens === */
 :root {
+    --surface: hsl(200 30% 97%);
+    --ink: hsl(205 40% 12%);
+    --muted: hsl(205 12% 40%);
+    --accent: hsl(200 70% 32%);
+    --line: hsl(200 20% 82%);
+    --dark: rgb(0 0 0 / 0.55);
+    --font-head: "Fraunces", Georgia, Verdana;
+    --font-text: Verdana, Geneva, Tahoma, sans-serif;
+    --height: 1.5rem;
+    --text-s: 0.8rem;
+    --text-m: 1rem;
+    --text-l: 1.25rem;
+    --text-xl: 1.563rem;
+    --text-xxl: 1.953rem;
+    --text-xxxl: 2.441rem;
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
 
 }
 
 /* === base === */
-
+body{
+    color: var(--ink);
+    background-color: var(--surface);
+    font-family: var(--font-text);
+    height: 150vh;
+    min-height: 100svh;
+    line-height: 1.5;
+    display:flex;
+    flex-direction: column;
+    main{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: var(--space-xl) var(--space-m);
+        gap: var(--space-l);
+        .tekst{
+            display:flex;
+            flex-direction: column;
+            min-width: 18rem;
+            max-width: 64rem;
+            h2{
+                font-family: var(--font-head);
+                font-size: var(--text-xl);
+                color: var(--accent);
+                padding-bottom: var(--space-s);
+            
+            }
+            p{
+                max-width: 65ch;
+                padding-bottom: var(--space-m);
+            }
+        }
+    }
+    .praktisch{
+        max-width: 64rem;
+        ul{
+            padding:var(--space-m);
+            padding-top: 0;
+            li{
+                padding-bottom: var(--space-xs);
+            }
+        }
+        h2{
+                font-family: var(--font-head);
+                font-size: var(--text-xl);
+                color: var(--accent);
+        }
+        border: 1px dotted var(--accent);
+        padding: var(--space-m);
+        padding-bottom: var(--space-xl);
+        background-image: url(../afbeeldingen/kompas.png);
+        background-position: right 1rem bottom 1rem;
+        background-size: 8rem;
+        background-repeat: no-repeat;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: auto;
+        border-top: 1px dotted var(--accent);
+        padding: var(--space-xl);
+        text-align: center;
+        color: var(--muted);
+        font-size: var(--text-s);
+        background-image: url(../afbeeldingen/golfjes.png);
+        background-repeat: repeat;
+        p{
+            background-color: var(--surface);
+            padding: var(--space-s) var(--space-m);
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
 /* === the hero: photo as background, text on a dark panel (7.10, F7.10) === */
-
+.held{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+    height: 60vh;
+    background-image: url(../afbeeldingen/kaaien.jpg);
+    background-size: cover;
+    background-position: center;
+    padding-left: var(--space-l);
+    padding-right: var(--space-l);
+    padding-bottom: var(--space-l);
+    .paneel{
+        max-width: 36rem;
+        padding: var(--space-l);
+        color: white;
+        .bovenkop{
+           font-size: var(--text-s);
+           font-weight: 900;
+           letter-spacing: 0.12rem;
+           padding-bottom: var(--space-s); 
+        }
+        h1{
+            font-family: var(--font-head);
+            font-size: clamp(2rem, 4vw + 1rem, 3.5rem);
+            font-weight: 760;
+            line-height: 1.1;
+            padding-bottom: var(--space-m);
+        }
+        .lead{
+            font-size: var(--text-l);
+            padding-bottom: var(--space-l);
+            letter-spacing: 1.5;
+        }
+        .knop{
+            background-color: var(--accent);
+            color: white;
+            font-weight: 900;
+            text-decoration: none;
+            padding: var(--space-s) var(--space-l);
+        }
+        .knop:hover, .knop:focus{
+            background-color: white;
+            color: var(--accent);
+        }
+        background-color: var(--dark);
+    }
+}
 /* === main, aside with a corner decoration, footer with a repeating tile === */

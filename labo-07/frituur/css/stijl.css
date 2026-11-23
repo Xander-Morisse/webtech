@@ -2,9 +2,141 @@
 
 /* === tokens: five colour roles in hsl (7.7) === */
 :root {
+    color-scheme: light dark;
+    --surface: hsl(45 60% 96%);
+    --ink:hsl(25 30% 12%);
+    --muted: hsl(25 10% 40%);
+    --accent: hsl(22 85% 40%);
+    --line: hsl(40 25% 80%);
+    --font-head: Georgia, 'Times New Roman', Times, serif;
+    --font-text: Verdana, Geneva, Tahoma, sans-serif;
+    --height-head: 1.1rem;
+    --height-text: 1.5rem;
+    --text-s: 0.8rem;
+    --text-m: 1rem;
+    --text-l: 1.25rem;
+    --text-xl: 1.563rem;
+    --text-xxl: 1.953rem;
+    --text-xxxl: 2.441rem;
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
 
 }
 
 /* === base === */
+body{
+    min-height: 100vh;
+    color: var(--ink);
+    background-color: var(--surface);
+    font-family: var(--font-text);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    header{
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: var(--space-xl);
+        padding-bottom: var(--space-l);
 
+        .naam{
+            font-size: var(--text-xxl);
+            font-family: var(--font-head);
+            color: var(--accent);
+            line-height: var(--height-head);
+        }
+        .slogan{
+            font-size: var(--text-m);
+            color: var(--muted);
+            padding-top: var(--space-s);
+        }
+    }
+    main{
+        max-width: 56rem;
+        padding-bottom: var(--space-l);
+        padding-left: var(--space-m);
+        padding-right: var(--space-m);
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap:var(--space-l);
+        section{
+            min-width:16rem;
+        }
+        h2{
+            font-family: var(--font-head);
+            font-size: var(--text-l);
+            line-height: 1.2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: var(--space-xs);
+            margin-bottom: var(--space-s);
+        }
+        .menu{
+            display: flex;
+            flex-direction: column;
+            padding: 0;
+            li{
+                padding:0;
+                padding-bottom: var(--space-s);
+                padding-top: var(--space-s);
+                border-bottom: 1px dotted;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                .label{
+                    background-color: var(--accent);
+                    color: var(--surface);
+                    font-size: var(--text-s);
+                    font-weight: 900;
+                    letter-spacing: 0.08rem;
+                    font-style: normal;
+                    border-radius: var(--space-xs);
+                    padding-left: var(--space-s);
+                    padding-right: var(--space-s);
+                    padding-top: var(--space-xs);
+                    padding-bottom: var(--space-xs);
+                }
+                .prijs{
+                    color: var(--accent);
+                    font-weight: 900;
+                }
+            }
+        }
+        .info{
+            grid-column: 1/4;
+            border: 1px dotted;
+            border-radius: var(--space-s);
+            padding: var(--space-m);
+            p {
+                max-width: 65ch;
+                padding-bottom: var(--space-s);
+            }
+            .gedempt{
+                font-size: var(--text-s);
+                color:var(--muted);
+            }
+        }
+    }
+    footer{
+        width: 100%;
+        padding-top: var(--space-l);
+        padding-bottom: var(--space-l);
+        color: var(--muted);
+        border-top: 1px dotted;
+        text-align: center;
+        margin-top: auto;
+    }
+}
 /* === dark mode: tokens only (7.9) === */
+@media
+    (prefers-color-scheme: dark) {
+    :root{
+        --surface: hsl(25 15% 10%);
+        --ink: hsl(40 30% 92%);
+        --muted: hsl(30 10% 70%);
+        --accent: hsl(32 90% 62%);
+        --line: hsl(25 10% 28%);
+    }
+}
