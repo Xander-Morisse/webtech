@@ -38,6 +38,7 @@
     --space-m: 1rem;
     --space-l: 2rem;
     --space-xl: 4rem;
+    --corner: 0;
 }
 
 /* === base === */
@@ -92,6 +93,33 @@ main{
             letter-spacing: 0.1em;
             padding-bottom: var(--space-s);
         }
+        h1{
+            font-family: var(--font-head);
+            font-size: var(--text-xxl);
+            font-weight: 700;
+            line-height: 1.1;
+            padding-bottom: var(--space-m);
+        }
+        .lead{
+            font-size: var(--text-l);
+            color: var(--muted);
+            padding-bottom: var(--space-l);
+        }
+        .knop{
+            text-decoration: none;
+            background-color: var(--accent);
+            color: var(--surface);
+            font-weight: 700;
+            padding: var(--space-s) var(--space-l);
+            border: 2px solid var(--accent);
+            border-radius: var(--corner);
+        }
+        .knop:hover, .knop:focus{
+            background-color: var(--surface);
+            color: var(--accent);
+            border: 2px solid var(--surface);
+        }
     }
+    
 }
 
