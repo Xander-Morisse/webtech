@@ -1,10 +1,97 @@
 /* stijl.css - labo 7, fietsatelier (reset.css is linked before this file, thema.css after it) */
 
 /* === tokens for look A: colours, fonts, radius, type scale, spacing scale === */
+@font-face {
+    font-family: "Atkinson";
+    src: url(../fonts/atkinson-hyperlegible-latin-400-normal.woff2) format(woff2);
+    font-weight: 400;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Atkinson";
+    src: url(../fonts/atkinson-hyperlegible-latin-700-normal.woff2) format(woff2);
+    font-weight: 700;
+    font-display: swap;
+}
+@font-face {
+    font-family: "Fraunces";
+    src: url(../fonts/fraunces-latin-wght-normal.woff2) format(woff2);
+    font-style: italic;
+    font-weight: 400;
+}
 :root {
-
+    --font-head: Georgia;
+    --font-text: Verdana;
+    --surface: hsl(40 30% 96%);
+    --ink: hsl(220 20% 15%);
+    --muted: hsl(220 10% 42%);
+    --accent: hsl(160 50% 30%);
+    --lijn: hsl(40 15% 82%);
+    --height: 1.5;
+    --text-s: 0.8rem;
+    --text-m: 1rem;
+    --text-l: 1.25rem;
+    --text-xl: 1.563rem;
+    --text-xxl: 1.953rem;
+    --space-xs: 0.25rem;
+    --space-s: 0.5rem;
+    --space-m: 1rem;
+    --space-l: 2rem;
+    --space-xl: 4rem;
 }
 
 /* === base === */
-
+body{
+    font-family: var(--font-text);
+    background-color: var(--surface);
+    font-size: var(--text-m);
+    line-height: var(--height);
+}
 /* === header, intro, cards, footer: every colour via var(), nothing hard-coded === */
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-m) var(--space-l);
+    border-bottom: 1px solid var(--lijn);
+
+    p{
+        font-family: var(--font-head);
+        font-size: var(--text-l);
+        font-weight: 700;
+    }
+    nav ul{
+        margin:0;
+        padding:0;
+        display: flex;
+        gap: var(--space-m);
+        li{
+            list-style: none;
+            padding:0;
+            a{
+                text-decoration-line: none;
+                font-family: var(--font-text);
+                color: var(--ink);
+                font-weight: 700;
+                border-bottom: 2px solid var(--surface);
+            }
+            a:hover, a:focus{
+                color: var(--accent);
+                border-bottom: 2px solid var(--accent);
+            }
+        }
+    }
+}
+main{
+    .intro{
+        max-width: 44rem;
+        padding: var(--space-xl) var(--space-l);
+        .bovenkop{
+            font-size: var(--text-s);
+            color: var(--accent);
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            padding-bottom: var(--space-s);
+        }
+    }
+}
+
